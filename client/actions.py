@@ -23,7 +23,8 @@ def login(connection):
         'mac_address': mac_address
     }))
 
-    response = connection.recv(1024).decode('utf-8')
+    response = connection.recv(65536).decode('utf-8')
+    print(response)
 
     if response == 'not-authorized':
         print('Not authorized')
