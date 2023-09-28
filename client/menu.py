@@ -11,7 +11,7 @@ def launchMenu():
       email, username = '1', '1'
       connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
       connection.connect((os.getenv('HOST'), int(os.getenv('PORT'))))
-      email, username = login(connection)
+      #email, username = login(connection)
       while True:
             try:
                   connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
